@@ -1,0 +1,10 @@
+{
+  "name": "mmm-photoroll",
+  "version": "1.0.0",
+  "description": "Affiche des photos depuis un dossier local, optimisé pour petits appareils",
+  "main": "MMM-PhotoRoll.js",
+  "keywords": ["magicmirror", "photos", "raspberry"],
+  "author": "Brendan SEILLER",
+  "license": "MIT",
+  "dependencies": {}
+}
