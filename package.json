@@ -1,10 +1,15 @@
 {
-  "name": "mmm-photoroll",
+  "name": "MMM-PhotoRoll",
   "version": "1.0.0",
-  "description": "Affiche des photos depuis un dossier local, optimisé pour petits appareils",
+  "description": "Display photos from a local folder with a blurred background. Optimized for Raspberry Pi.",
   "main": "MMM-PhotoRoll.js",
-  "keywords": ["magicmirror", "photos", "raspberry"],
-  "author": "Brendan SEILLER",
+  "keywords": [
+    "magicmirror",
+    "photos",
+    "raspberry",
+    "slideshow"
+  ],
+  "author": "Brendan",
   "license": "MIT",
   "dependencies": {}
 }

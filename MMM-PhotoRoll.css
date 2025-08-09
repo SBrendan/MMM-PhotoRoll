@@ -1,68 +1,28 @@
-.pr-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 
-  /* centre la stage dans la région MagicMirror */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pr-wrapper{
+  position:relative; width:100%; height:100%; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
 }
-
-/* La stage est la boîte contrainte (<= maxWidth/Height, >= minWidth/Height) */
-.pr-stage {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  /* garde l’image centrée si la stage ne remplit pas tout */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* évite tout débordement du blur */
-  overflow: hidden;
+.pr-stage{
+  position:relative; width:100%; height:100%; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
 }
-
-/* Le fond flou ne dépasse pas la stage */
-.pr-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(20px) brightness(0.7);
-  transform: scale(1.1); /* cache les bords nets du blur */
-  z-index: 0;
+.pr-bg{
+  position:absolute; inset:0; z-index:0;
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+  filter:blur(22px) brightness(0.7);
+  transform:scale(1.1);
 }
-
-/* L’image nette reste contenue dans la stage */
-.pr-image {
-  position: relative;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-
-  opacity: 0;
-  animation: pr-fadein var(--pr-fade-seconds, 0.8s) ease-in forwards;
-  z-index: 1;
+.pr-image{
+  position:relative; z-index:1;
+  max-width:100%; max-height:100%;
+  object-fit:contain;
+  opacity:0;
+  animation: pr-fadein var(--pr-fade-seconds, .8s) ease-in forwards;
 }
-
-.pr-caption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 6px 10px;
-  font-size: 14px;
-  background: rgba(0,0,0,0.35);
-  color: #fff;
-  text-align: center;
-  z-index: 2;
+.pr-caption{
+  position:absolute; left:0; right:0; bottom:0; z-index:2;
+  padding:6px 10px; font-size:14px; text-align:center; color:#fff;
+  background:rgba(0,0,0,.35);
 }
-
-@keyframes pr-fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+@keyframes pr-fadein{ from{opacity:0} to{opacity:1} }
